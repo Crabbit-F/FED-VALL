@@ -29,10 +29,8 @@
     height: 30vh;position: sticky;display: flex; justify-content: center; align-items: center;">
     <h1 class="entry-title" itemprop="headline"
       style="text-align: center;font-weight: bold; font-size: 6.25rem;color: white;">
-      Universal Low-Resource
-      Speech Synthesis
-      Via Phoneme Fusion
-      Coordinating Low-Rank Decomposition</h1>
+      FED-VALL: FEDERATED NEURAL CODEC LANGUAGE MODEL VIA MIXTURE OF
+EXPERTS</h1>
   </div> </body>
 
   <body>
@@ -51,26 +49,19 @@
             <br>
             <img src="./modelimage/model.png" alt="model.png">
             <h2 id="abstract" style="color: rgb(21, 153, 87);">Abstract</h2>
-            <p style="text-align: justify;"> Recent advancements in end-to-end text-to-speech models have made
-              significant
-              progress. However, these
-              approaches based on high-resource languages, are inapplicable for low-resource languages, and existing
-              low-resource speech synthesis methods are typically specific to single languages. Consequently, the
-              pursuit
-              of a universal methodology for low-resource speech synthesis emerges as a critical problem that requires
-              immediate attention. Unlike previous works, we propose a novel and universal approach for multiple
-              low-resource languages by leveraging phoneme fusion coordinating low-rank decomposition in a pre-trained
-              multilingual model. Specifically, by establishing a multilingual phoneme dictionary through phoneme fusion
-              and applying parameter freezing and matrix decomposition techniques for fine-tuning, the proposed method
-              was
-              extensively evaluated across four different languages, each utilizing approximately 3 hours of speech
-              data.
-              The experimental results demonstrate that the quality of the synthesized speech surpasses current
-              mainstream
-              methods for low-resource speech synthesis, achieving outcomes comparable to those trained with tens of
-              hours
-              of data. Audio samples are available at
-              <span style="color: blue;">https://priankaan.github.io/Demo.github.io</span>
+            <p style="text-align: justify;"> Federated Text-to-Speech (Fed-TTS) is a promising
+                paradigm for institutions with audio training constraints,
+                which avoids centralizing sensitive data, leading to significant cost reductions in corpus collection while ensuring data
+                privacy. Despite the neural codec language model (VALL-E)
+                has exceptional capabilities in text-to-speech tasks, its growing model parameters create a bottleneck in training speed
+                due to high communication costs during synchronization. In
+                this paper, we propose a communication-efficient federated
+                neural codec language model (Fed-VALL) framework to address this issue. Our approach maintains a frozen model,
+                transferring lightweight adapter modules between clients. To
+                mitigate the diverse speaker conflicts, we leverage the mixture
+                of experts (MOE). Experimental results show our framework
+                reduces communication costs by over 97%, with comparable
+                or superior performance to competitive baselines.
             </p>
             <h2 id="abstract" style="color: rgb(21, 153, 87);">Comparative audio samples of different systems from four
               languages: Thai, Lao, Vietnamese (Vi), and Kurdish (Ku)</h2>
@@ -87,19 +78,19 @@
               </thead>
               <tbody>
                 <tr>
-                  <td style="text-align: center;">Lao</td>
-                  <td style="text-align: center;">ຂໍຂອບໃຈທີ່ໄດ້ພົບເຈົ້າ</td>
+                  <td style="text-align: center;">en</td>
+                  <td style="text-align: center;"></td>
                   <td style="text-align: center"><audio controls="controls">
-                      <source src="audio/vall-e-u/lao_3.wav" autoplay />
+                      <source src="" autoplay />
                     </audio></td>
                   <td style="text-align: center"><audio controls="controls">
-                      <source src="audio/vall-e-x/lao-3.wav" autoplay />
+                      <source src="" autoplay />
                     </audio></td>
                   <td style="text-align: center"><audio controls="controls">
-                      <source src="audio/fastspeech2/lao_3.wav" autoplay />
+                      <source src="" autoplay />
                     </audio></td>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td style="text-align: center;">Lao</td>
                   <td style="text-align: center;">ສະບາຍດີ ຂ້ອຍຍິນດີທີ່ໄດ້ພົບເຈົ້າ</td>
                   <td style="text-align: center"><audio controls="controls">
@@ -176,7 +167,7 @@
                   <td style="text-align: center"><audio controls="controls">
                       <source src="audio/fastspeech2/vi.wav" autoplay />
                     </audio></td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
 
